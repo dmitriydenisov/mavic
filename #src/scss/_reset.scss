@@ -31,6 +31,12 @@ dl,
 dd {
   margin: 0;
 }
+body{
+  min-height: 320px;
+  overflow-x: hidden;
+  position: relative;
+  color: #fff;
+}
 
 ul[class] {
   list-style: none;
@@ -50,4 +56,22 @@ select {
 
 a{
   text-decoration: none;
+  color: inherit;
 }
+.container{
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.page-section{
+  height: 100vh;
+  background-image: url("../img/background/product-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+.title{
+
+}
+.scroll__btn{}
