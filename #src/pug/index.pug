@@ -8,35 +8,35 @@ html(lang="en")
         link(rel="stylesheet" href="css/main.min.css")
 
     body
-        .wrapper
-            header.header
-                .container
-                    .header__inner
-                        a.logo(href="#")
-                            picture.logo__img
-                                source(srcset="img/logo-mobile.png" media="max-width: 640px")
-                                img(src="img/logo.png", alt="", srcset="")
-                        nav.menu 
-                            ul.menu__list 
-                                li.menu__list-item
-                                    a(class="menu__item-link" href="#") О ДРОНЕ
-                                li.menu__list-item
-                                    a(class="menu__item-link" href="#") ПРЕИМУЩЕСТВА
-                                li.menu__list-item
-                                    a(class="menu__item-link" href="#") ХАРАКТЕРИСТИКИ
-                                li.menu__list-item
-                                    a(class="menu__item-link" href="#") ВОПРОСЫ
-                                li.menu__list-item
-                                    a(class="menu__item-link" href="#") КОНТАКТЫ
-                        .header__info 
-                            button.header__btn  Купить
-                            a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
-                //- a.scroll__btn(href="#")
-                //-     img(src="img/arrow-down.svg", alt="", srcset="")
-            section.page-section 
+        header.header
+            .container
+                .header__inner
+                    a.logo(href="#")
+                        picture.logo__img
+                            source(srcset="img/logo-mobile.png" media="max-width: 640px")
+                            img(src="img/logo.png", alt="", srcset="")
+                    nav.menu 
+                        ul.menu__list 
+                            li.menu__list-item
+                                a(class="menu__item-link" href="#") О ДРОНЕ
+                            li.menu__list-item
+                                a(class="menu__item-link" href="#") ПРЕИМУЩЕСТВА
+                            li.menu__list-item
+                                a(class="menu__item-link" href="#") ХАРАКТЕРИСТИКИ
+                            li.menu__list-item
+                                a(class="menu__item-link" href="#") ВОПРОСЫ
+                            li.menu__list-item
+                                a(class="menu__item-link" href="#") КОНТАКТЫ
+                    .header__info 
+                        button.header__btn  Купить
+                        a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
+            //- a.scroll__btn(href="#")
+            //-     img(src="img/arrow-down.svg", alt="", srcset="")
+        section.page-section.top
+            .page-section__wrapper.top__wrapper
                 .container
                     .top__inner
-                        h1.top__tile Mavic 2 Pro
+                        h1.top__title Mavic 2 Pro
                         img(src="img/usercontent/mavic.png", alt="")
                         p.top__text Квадрокоптер Dji Mavic 2 Pro с профессиональной камерой Hasselblad
                         ul.top__social-list
@@ -52,7 +52,8 @@ html(lang="en")
                 a.scroll__btn(href="#product")
                     img(src="img/arrow-down.svg", alt="", srcset="")
 
-            section.page-section.product#product
+        section.page-section.product#product
+            .page-section__wrapper
                 .container
                     h3.title.product__title Что такое Mavic 2 Pro?
                     .product__inner
@@ -77,7 +78,8 @@ html(lang="en")
                 a.scroll__btn(href="#benefits")
                     img(src="img/arrow-down.svg", alt="", srcset="")
 
-            section.page-section.benefits#benefits
+        section.page-section.benefits#benefits
+            .page-section__wrapper
                 .container
                     h3.title.benefits__title Преимущества
                     .benefits__items
@@ -113,7 +115,8 @@ html(lang="en")
                 a.scroll__btn(href="#specification")
                     img(src="img/arrow-down.svg", alt="", srcset="")
 
-            section.page-section.specification#specification
+        section.page-section.specification#specification
+            .page-section__wrapper
                 .container
                     h3.title Характеристики
                     .specification__inner
@@ -135,8 +138,8 @@ html(lang="en")
                                 p.specification__box-text Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре
                 a.scroll__btn(href="#questions")
                     img(src="img/arrow-down.svg", alt="", srcset="")
-
-            section.page-section.questions#questions
+        section.page-section.questions#questions
+            .page-section__wrapper
                 .container
                     h3.title Остались вопросы?
                     .questions__items
@@ -154,8 +157,8 @@ html(lang="en")
                             .questions__item-text В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).
                 a.scroll__btn(href="#contacts")
                     img(src="img/arrow-down.svg", alt="", srcset="")
-
-            section.page-section.contacts#contacts
+        section.page-section.contacts#contacts
+            .page-section__wrapper
                 .container
                     h3.title Контакты
                     .contacts__inner 
@@ -193,7 +196,7 @@ html(lang="en")
                                     img(src="img/social/instagram.svg", alt="")
                 //- a.scroll__btn(href="#footer")
                 //-     img(src="img/arrow-down.svg", alt="", srcset="")
-                footer.footer
-                    .container
-                        p.foote__copy © DJI, 2020
+            footer.footer
+                .container
+                    p.foote__copy © DJI, 2020
     script(src="js/main.js")
