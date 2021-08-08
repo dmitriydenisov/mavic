@@ -1,5 +1,11 @@
 html{
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 *,
@@ -8,70 +14,18 @@ html{
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-body,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-ul,
-ol,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
+h6 {
   margin: 0;
 }
-body{
-  min-height: 320px;
-  overflow-x: hidden;
-  position: relative;
-  color: #fff;
-}
-
-ul[class] {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-a{
-  text-decoration: none;
-  color: inherit;
-}
-.container{
-  max-width: 1270px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-.page-section{
-  height: 100vh;
-  background-image: url("../img/background/product-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  position: relative;
-}
-.title{
-
-}
-.scroll__btn{}
