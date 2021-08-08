@@ -4,6 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title mavic
+        link(rel="stylesheet" type="text/css" href="libs/slick/slick.css")
         link(href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="css/main.min.css")
 
@@ -51,7 +52,6 @@ html(lang="en")
                                     img(src="img/social/instagram.svg", alt="")
                 a.scroll__btn(href="#product")
                     img(src="img/arrow-down.svg", alt="", srcset="")
-
         section.page-section.product#product
             .page-section__wrapper
                 .container
@@ -199,4 +199,6 @@ html(lang="en")
             footer.footer
                 .container
                     p.foote__copy © DJI, 2020
+    script(src="libs/jquery/jquery.js")                
+    script(type="text/javascript" src="libs/slick/slick.min.js")
     script(src="js/main.js")

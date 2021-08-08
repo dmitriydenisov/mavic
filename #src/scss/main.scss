@@ -100,3 +100,36 @@
         }
     }
 }
+
+.product{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50px;
+    }
+    &__text{
+        max-width: 440px;
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    &__slider-box{
+        position: relative;
+        padding-top: 110px;
+    }
+    &__slider-text{
+        @extend %ubuntu-medium;
+        width: 285px;
+        position: absolute;
+        bottom: 30px;
+        left: -150px;
+        text-align: right;
+        font-size: 24px;
+        line-height: 28px;
+        z-index: 1;
+    }
+    &__slider{
+        max-width: 560px;
+
+    }
+}
