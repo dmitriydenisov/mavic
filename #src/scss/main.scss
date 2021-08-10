@@ -10,7 +10,7 @@
     left: 0;
     top: 30px;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     &__inner{
         @extend %ubuntu-medium;
         display: flex;
@@ -130,6 +130,37 @@
     }
     &__slider{
         max-width: 560px;
-
+        &:before{
+            content: "";
+            position: absolute;
+            width: 560px;
+            height: 276px;
+            border: 4px solid #fff;
+            top: -15px;
+            right: -17px;
+        }
+    }
+}
+.slider-btn{
+    position: absolute;
+    padding: 16px 26px;
+    border: none;
+    background-color: #1C1C1C;
+    cursor: pointer;
+    transition: all .3s;
+    right: 0;
+    bottom: -50px;
+    z-index: 1;
+    svg{
+        stroke: #fff;
+    }
+    &:hover{
+    background-color: #ffffff;
+        svg{
+            stroke: #000;
+        }
+    }
+    &__left{
+        right: 60px;
     }
 }
