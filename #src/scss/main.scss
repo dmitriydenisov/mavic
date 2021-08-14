@@ -425,6 +425,7 @@
     &__form-line{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 10px;
     }
     &__form-input,
     &__form-textarea{
@@ -445,8 +446,29 @@
         width: 49%;
     }
     &__form-textarea{
+        min-height: 145px;
+        width: 100%;
+        resize: none;
     }
-    &__form-btn{}
+    &__form-btn{
+        @extend %ubuntu-bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        color: #fff;
+        background: transparent;
+        border-radius: 2px;
+        border: 2px solid #fff;
+        padding: 9px 15px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            color: #000;
+            background: #fff;
+        }
+    }
     &__social-list{}
     &__social-item {}
     &__social-link{}
