@@ -20,7 +20,25 @@
         order: 1;
     }
     .menu__list{
-        display: none;
+        overflow: auto;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(#1C1C1C, .9);
+        z-index: -1;
+        display: flex;
+        padding-top: 90px;
+        padding-left: 30px;
+        flex-direction: column;
+        justify-content: space-around;
+        transform: translateY(-1000%);
+        transition: transform .3s;
+
+        &--active{
+            transform: translateY(0);
+        }
     }
     .menu__btn{
         display: block;
@@ -34,6 +52,7 @@
             height: 2px;
             background: #E0E0E0;
             display: block;
+            transition: transform .3s;
         }
         &:before{
             margin-bottom: 4px;
@@ -44,12 +63,55 @@
             margin-left: auto;
         }
     }
+    .menu__list-item + .menu__list-item {
+            padding-left: 0;
+    }
+    .menu__list-item{
+        margin-bottom: 35px;
+        &:first-child{
+            margin-top: auto;
+        }
+    }
+    .menu__list-phone{
+        display: block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #fff;
+        padding-top: 33px;
+        position: relative;
+        margin-bottom: auto;
+        margin-top: auto;
+        &:before{
+            content: "";
+            position: absolute;
+            border-top: 1px solid rgba(#fff, .24);
+            top: 0;
+            left: -24px;
+            right: 0;
+        }
+    }
     .menu__btn-line{
         display: block;
         background: #E0E0E0;
         width: 25px;
         height: 2px;
         margin-bottom: 4px;
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    .menu__btn.menu__btn--active{
+        .menu__btn-line{
+            opacity: 0;
+            transition: opacity 0s;
+        }
+        &:after{
+            width: 24px;
+            transform: translateY(-6px) rotate(-135deg);
+        }
+        &:before{
+            transform: translateY(6px) rotate(135deg);
+        }
     }
     .header__phone{
         display: none;
@@ -67,5 +129,15 @@
     }
     .scroll__btn{
         padding: 13px 0;
+    }
+}
+@media(max-height: 375px) {
+    .menu__list-phone{
+        padding: 15px 0;
+    }
+}
+@media(max-height: 340px) {
+    .menu__list-item{
+        margin-bottom: 18px;
     }
 }

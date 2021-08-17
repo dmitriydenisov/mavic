@@ -12,34 +12,35 @@ html(lang="en")
     body
         header.header
             .container
-                .header__inner
-                    a.logo(href="#")
-                        picture.logo__img
-                            source(srcset="img/logo-mobile.png" media="(max-width: 600px)")
-                            img(src="img/logo.png", alt="", srcset="")
+                .header__inner#header__nav
+                    data(data-menuanchor="top")
+                        a.logo(href="#top")
+                            picture.logo__img
+                                source(srcset="img/logo-mobile.png" media="(max-width: 600px)")
+                                img(src="img/logo.png", alt="", srcset="")
                     nav.menu 
                         button.menu__btn 
                             span.menu__btn-line
                         ul.menu__list 
-                            li.menu__list-item
-                                a(class="menu__item-link" href="#") О ДРОНЕ
-                            li.menu__list-item
-                                a(class="menu__item-link" href="#") ПРЕИМУЩЕСТВА
-                            li.menu__list-item
-                                a(class="menu__item-link" href="#") ХАРАКТЕРИСТИКИ
-                            li.menu__list-item
-                                a(class="menu__item-link" href="#") ВОПРОСЫ
-                            li.menu__list-item
-                                a(class="menu__item-link" href="#") КОНТАКТЫ
+                            li.menu__list-item(data-menuanchor="product")
+                                a(class="menu__item-link" href="#product") О ДРОНЕ
+                            li.menu__list-item(data-menuanchor="benefits")
+                                a(class="menu__item-link" href="#benefits") ПРЕИМУЩЕСТВА
+                            li.menu__list-item(data-menuanchor="specification")
+                                a(class="menu__item-link" href="#specification") ХАРАКТЕРИСТИКИ
+                            li.menu__list-item(data-menuanchor="questions")
+                                a(class="menu__item-link" href="#questions") ВОПРОСЫ
+                            li.menu__list-item(data-menuanchor="contacts")
+                                a(class="menu__item-link" href="#contacts") КОНТАКТЫ
                             li.menu__list-phone
-                                a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
+                                a.header__phone-menu(href="tel:80505676767") 8 (050) 567 67 67
                     .header__info 
                         button.header__btn  Купить
                         a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
             //- a.scroll__btn(href="#")
             //-     img(src="img/arrow-down.svg", alt="", srcset="")
         main#fullpage
-            section.page-section.top
+            section.page-section.top(data-anchor="top")
                 .page-section__wrapper.top__wrapper
                     .container
                         .top__inner
@@ -58,7 +59,7 @@ html(lang="en")
                                         img(src="img/social/instagram.svg", alt="")
                     a.scroll__btn(href="#product")
                         img(src="img/arrow-down.svg", alt="", srcset="")
-            section.page-section.product#product
+            section.page-section.product(data-anchor="product")
                 .page-section__wrapper
                     .container
                         h3.title.product__title Что такое Mavic 2 Pro?
@@ -84,7 +85,7 @@ html(lang="en")
                     a.scroll__btn(href="#benefits")
                         img(src="img/arrow-down.svg", alt="", srcset="")
 
-            section.page-section.benefits#benefits
+            section.page-section.benefits(data-anchor="benefits")
                 .page-section__wrapper
                     .container
                         h3.title.benefits__title Преимущества
@@ -121,7 +122,7 @@ html(lang="en")
                     a.scroll__btn(href="#specification")
                         img(src="img/arrow-down.svg", alt="", srcset="")
 
-            section.page-section.specification#specification
+            section.page-section.specification(data-anchor="specification")
                 .page-section__wrapper
                     .container
                         h3.title Характеристики
@@ -144,7 +145,7 @@ html(lang="en")
                                     p.specification__box-text Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре
                     a.scroll__btn(href="#questions")
                         img(src="img/arrow-down.svg", alt="", srcset="")
-            section.page-section.questions#questions
+            section.page-section.questions(data-anchor="questions")
                 .page-section__wrapper
                     .container
                         h3.title Остались вопросы?
@@ -163,7 +164,7 @@ html(lang="en")
                                 .questions__item-text В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).
                     a.scroll__btn(href="#contacts")
                         img(src="img/arrow-down.svg", alt="", srcset="")
-            section.page-section.contacts#contacts
+            section.page-section.contacts(data-anchor="contacts")
                 .page-section__wrapper
                     .container
                         h3.title Контакты
@@ -206,4 +207,5 @@ html(lang="en")
     script(src="libs/jquery/jquery.js")
     script(type="text/javascript" src="libs/slick/slick.min.js")
     script(type="text/javascript" src="libs/fullpage/fullpage.js")
+    script(type="text/javascript" src="libs/fullpage/vendors/scrolloverflow.min.js")
     script(src="js/main.js")
