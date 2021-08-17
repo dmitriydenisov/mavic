@@ -42,11 +42,17 @@
     }
 }
 .menu{
+    &__btn{
+        display: none;
+    }
     &__list-item{
         display: inline-block;
         & + .menu__list-item {
             padding-left: 20px;
         }
+    }
+    &__list-phone{
+        display: none;
     }
 }
 .top{
@@ -498,3 +504,5 @@
         color: rgba(#fff, .64);
     }
 }
+
+@import 'media';

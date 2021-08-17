@@ -15,9 +15,11 @@ html(lang="en")
                 .header__inner
                     a.logo(href="#")
                         picture.logo__img
-                            source(srcset="img/logo-mobile.png" media="max-width: 640px")
+                            source(srcset="img/logo-mobile.png" media="(max-width: 600px)")
                             img(src="img/logo.png", alt="", srcset="")
                     nav.menu 
+                        button.menu__btn 
+                            span.menu__btn-line
                         ul.menu__list 
                             li.menu__list-item
                                 a(class="menu__item-link" href="#") О ДРОНЕ
@@ -29,6 +31,8 @@ html(lang="en")
                                 a(class="menu__item-link" href="#") ВОПРОСЫ
                             li.menu__list-item
                                 a(class="menu__item-link" href="#") КОНТАКТЫ
+                            li.menu__list-phone
+                                a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
                     .header__info 
                         button.header__btn  Купить
                         a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
