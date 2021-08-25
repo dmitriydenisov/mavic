@@ -3,6 +3,11 @@
         font-size: 16px;
         line-height: 22px;
     }
+    .header{
+        background: rgba(#1C1C1C, .9);
+        padding: 25px 0;
+        top: 0;
+    }
     .top__title{
         font-size: 75px;
         line-height: 90px;
@@ -31,13 +36,44 @@
         font-size: 20px;
     line-height: 22px;
     }
+    .benefits{
+        .title{
+            padding-top: 10px;
+        }
+    }
+    .benefits__item{
+        margin-bottom: 80px;
+    }
+}
+@media(max-width: 1280px){
+    .benefits__item{
+        width: 45%;
+    }
+    .benefits__item:first-child:before{
+        width: 40%;
+    }
+    .benefits__item:nth-child(3):before{
+        width: 30%;
+    }
+    .benefits__item:nth-child(3):after{
+        width: 80%;
+    }
+    .benefits__info{
+        width: 35%;
+    }
+    .benefits__items{
+        display: block;
+    }
+    .benefits__item{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .benefits__item:nth-child(even){
+        margin-left: 200px;
+        transform: translateY(0);
+    }
 }
 @media(max-width: 1100px){
-    .header{
-        background: rgba(#1C1C1C, .9);
-        padding: 25px 0;
-        top: 0;
-    }
     .menu{
         order: 1;
     }
@@ -147,6 +183,11 @@
     .product__slider-box{
         padding-right: 20px;
     }
+    .benefits__item:first-child:before,
+    .benefits__item:nth-child(3):before,
+    .benefits__item:nth-child(3):after{
+        display: none;
+    }
 }
 @media(max-width: 1024px){
     .title{
@@ -175,6 +216,20 @@
     }
     .product__slider-box{
         padding-bottom: 80px;
+    }
+}
+@media(max-width: 787px){
+    .benefits__item:nth-child(even){
+        margin-left: 0;
+    }
+    .benefits__item:nth-child(3){
+        margin-left: 0;
+    }
+    .benefits__items{
+        padding-left: 0;
+    }
+    .benefits__info{
+        width: 100%;
     }
 }
 @media(max-width: 680px){
@@ -217,23 +272,32 @@
         margin: 15px 0 50%;
     }
     .scroll__btn{
-        padding: 13px 0 40px;
+        padding: 13px 0 ;
     }
     .slider-btn{
-        display: none;
+        // display: none;
     }
     .product__slider-box {
         padding-bottom: 0;
     }
-    // .top__wrapper{
-    //     align-items: center;
-    // }
-    // .scroll__btn{
-    //     padding-bottom: 30px;
-    // }
+    .benefits__num{
+        display: none;
+    }
+    .benefits__item{
+        display: block;
+    }
+    .benefits__img{
+        padding: 20px 0;
+        &:before{
+            top: 8px;
+        }
+        img{
+            display: block;
+            margin-left: auto;
+        }
+    }
 }
 @media(max-height: 375px) {
-    
     .menu__list-phone{
         padding: 15px 0;
     }
