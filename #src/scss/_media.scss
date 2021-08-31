@@ -275,6 +275,14 @@
     .product__slider-box{
         padding-bottom: 80px;
     }
+    .contacts__inner{
+        flex-wrap: wrap;
+    }
+    .contacts__form{
+        width: 100%;
+        margin-right: 0;
+        order: 1;
+    }
 }
 @media(max-width: 877px){
     .specification__box-2,
@@ -316,6 +324,9 @@
     }
     .questions__item-text{
         padding: 0 15px 40px 30px;
+    }
+    .contacts__inner{
+        padding-left: 0;
     }
 }
 @media(max-width: 680px){
@@ -394,6 +405,22 @@
         line-height: 18px;
         font-size: 15px;
         padding: 15px 75px 15px 15px;
+    }
+    .contacts__form-line{
+        flex-wrap: wrap;
+    }
+    .contacts__form-input{
+        &:first-child{
+            margin-bottom: 10px;
+        }
+        width: 100%;
+    }
+}
+@media(max-width: 400px){
+    .contacts__social-list{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
     }
 }
 @media(max-height: 375px) {
