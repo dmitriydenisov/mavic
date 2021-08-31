@@ -26,7 +26,7 @@
         padding-top: 0;
     }
     .scroll__btn{
-        padding-bottom: 5px;
+        padding-bottom: 20px;
     }
     .product__slider-text{
         top: -105px;
@@ -61,6 +61,25 @@
         .title{
             padding-top: 40px;
             margin-bottom: 17px;
+        }
+    }
+    .questions{
+        .title{
+            padding-top: 35px;
+            margin-bottom: 20px;
+        }
+        &__item-title{
+            line-height: 22px;
+            font-size: 18px;
+            padding: 16px 10px 16px 30px;
+            &::after{
+                width: 60px;
+                height: 54px;
+                right: -60px;
+            }
+        }
+        &__item-text{
+            padding: 0 5px 40px 30px;
         }
     }
 }
@@ -292,6 +311,12 @@
     .specification__item--center{
         margin-top: 0;
     }
+    .questions__items{
+        padding-right: 60px;
+    }
+    .questions__item-text{
+        padding: 0 15px 40px 30px;
+    }
 }
 @media(max-width: 680px){
     .product__inner{
@@ -356,6 +381,19 @@
             display: block;
             margin-left: auto;
         }
+    }
+}
+@media(max-width: 414px){
+    .questions__items{
+        padding-right: 0;
+    }
+    .questions__item-title::after{
+        right: 0;
+    }
+    .questions__item-title{
+        line-height: 18px;
+        font-size: 15px;
+        padding: 15px 75px 15px 15px;
     }
 }
 @media(max-height: 375px) {
